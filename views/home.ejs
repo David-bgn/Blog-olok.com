@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+<div class="home">
+  <div class="home-main-title">
+    <h1 class="home-title">
+      Welcome! Let's write down what you have your mind!
+    </h1>
+  </div>
+  <h2>Create your blog below:</h2>
+  <div class="blog-section">
+    <form action="/new" method="POST">
+      <label for="new-blog">Blog Name:</label><br />
+      <input
+        class="blog-name"
+        type="text"
+        id="blogName"
+        name="blogName"
+        required
+        minlength="3"
+      /><br />
+      <label for="title">Blog Content:</label><br />
+      <textarea
+        class="blog-content"
+        type="text"
+        id="blogContent"
+        name="blogContent"
+        required
+        minlength="3"
+      ></textarea
+      ><br />
+      <input class="sbt-btn" type="submit" value="Create" />
+    </form>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

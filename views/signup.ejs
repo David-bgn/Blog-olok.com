@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/sign-up" method="POST">
+    <div class="sign-up">
+        <label for="user-name">User Name:</label>
+        <input type="text" id="userName" name="userName" placeholder="Enter your user name" required minlength="5"><br/>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" placeholder="Enter your password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <p>The password must contain A-z, 0-9, and symbols(!@$*#(&))</p>
+        <input class="sign-up-btn" type="submit" value="Sign Up">
+    </div>
+</form>
+
+<%- include("partials/footer.ejs") %>
