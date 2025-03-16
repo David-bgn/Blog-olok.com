@@ -131,5 +131,5 @@ app.delete("/blogs/:id", (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Server liston on port: ${port}`);
+    console.log(`Server liston on port: http://localhost:${port}`);
 });
